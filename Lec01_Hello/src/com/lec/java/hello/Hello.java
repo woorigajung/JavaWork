@@ -1,4 +1,10 @@
 package com.lec.java.hello;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Vector;
+
 /*
  * Java 첫 프로그램.
  * [학습목표]
@@ -28,7 +34,14 @@ public class Hello {
 		System.out.print("프레임워크");
 		System.out.println("풀스택 과정");
 		System.out.println("2020-03-16");
+		
 
+		String[]a = new String[] {"hi","bye"};
+		String[]b = new String[] {"bye","hi"};
+		
+		System.out.println(Arrays.equals(a, b));
+		Arrays.sort(a);
+		
 	}
 
 }
