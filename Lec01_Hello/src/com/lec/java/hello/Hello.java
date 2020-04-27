@@ -41,6 +41,7 @@ public class Hello {
 		
 		System.out.println(Arrays.equals(a, b));
 		Arrays.sort(a);
+		a.length
 		
 	}
 
