@@ -3,7 +3,7 @@ package phonebook01.class01;
 import java.util.Scanner;
 
 public class PhonebookMain {
-
+// 하잇 깃허브
 	Scanner sc;
 	PhonebookModel [] bookData = new PhonebookModel[5]; 
 	
