@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- 
+모바일 퍼스트로 제작
+과제 css 따로 파일 만들지 말고 한번에
+
+-->
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.기본스타일 : mobile first */
+        * {
+            box-sizing: border-box;
+            /* RWD 필수! */
+            height: 100px;
+      
+        }
+
+            /* Tablet */
+            .col-m-1 {width: 100%;
+            background-color: mediumpurple;
+            }
+            .col-m-2 {width: 100%;
+            background-color: rebeccapurple ;}
+
+            .col-m-3 {width: 100%;
+             background-color: turquoise;
+            list-style-type: none;
+            }
+            
+             .col-m-4 {width: 100%;
+            background-color: white;}
+
+            .col-m-5 {width: 33.3%;     
+            background-color: thistle;}
+            
+            .col-m-6 {width:33.3%;
+            background-color: teal;}
+            
+            .col-m-7 {width: 33.3%;
+            background-color: burlywood;}
+
+            .col-m-8 {width: 100%;
+            background-color: sandybrown;
+            }
+            .clear{
+                clear: both;
+            }
+
+        [class*="col-"] {
+            float: left;
+            padding: 20px;
+        }
+
+        /* 2: 600px 이상 : tablet */
+        @media screen and (min-width: 600px) {
+
+             /* Tablet */
+             .col-m-1 {width: 16.6%;
+            background-color: mediumpurple;
+            }
+            .col-m-2 {width: 83.3%;
+            background-color: rebeccapurple ;}
+
+            .col-m-3 {width: 16.6%;
+             background-color: turquoise;
+            height: 300px;
+
+            }
+            
+             .col-m-4 {width: 66.6%;
+            background-color: white;
+            height: 300px;
+        }
+
+            .col-m-5 {width: 16.6%;
+            background-color: thistle;
+            height: 150px;
+        }
+            
+            .col-m-6 {width: 16.6%;
+            background-color: teal;
+            height: 150px;
+        }
+            
+            .col-m-7 {width: 25%;
+            background-color: burlywood;}
+
+            .col-m-8 {width: 75%;
+            background-color: sandybrown;
+            }
+        }
+
+        /* 3: 767px 이상 : pc */
+        @media screen and (min-width: 768px) {
+
+            
+             /* Tablet */
+            .col-1 {width: 33.3%;
+            background-color: mediumpurple;
+            }
+            .col-2 {width: 66.6%;
+            background-color: rebeccapurple ;}
+
+            .col-3 {width: 16.6%;
+             background-color: turquoise;
+            list-style-type: none;
+            height: 300px;
+        }
+        
+            .col-4 {width: 50%;
+            background-color: white;
+            height: 300px;
+        }
+
+            .col-5 {width: 33.3%;
+            background-color: thistle;
+            height: 100px;
+        }
+            
+            .col-6 {width: 33.3%;
+            background-color: teal;
+            height: 100px;
+
+        }
+            
+            .col-7 {width: 33.3%;
+            background-color: burlywood;
+                height: 100px;
+        }
+
+            .col-8 {width: 100%;
+            background-color: sandybrown;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <div class="col-1 col-m-1">A:4</div>
+  <div class="col-2 col-m-2">B:8</div>
+  
+  <div class="col-3 col-m-3">
+      C:2
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<div class="col-4 col-m-4">
+    C:6
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+<div class="col-5 col-m-5">E:4</div>
+<div class="col-6 col-m-6">F:4</div>
+<div class="col-7 col-m-7">G:4</div>
+
+
+<div class="col-8 col-m-8">H:9</div>
+</body>
+</bo2y>
+
+</html>
