@@ -22,6 +22,7 @@ public class Hello {
 		while(true) {
 			System.out.println(i.solution(new int[] { 1, 2, 3, 2, 3 })[i]);
 		}
+		
 
 	} // end main()
 	// https://www.youtube.com/watch?v=S6YFtFJma4Q
