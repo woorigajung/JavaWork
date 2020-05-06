@@ -1,21 +1,56 @@
 package 반복제어문1.자가진단01;
-
-import java.util.Scanner;
-
-
+//	문제 설명
+//	피보나치 수는 F(0) = 0, F(1) = 1일 때, 1 이상의 n에 대하여 F(n) = F(n-1) + F(n-2) 가 적용되는 수 입니다.
+//	
+//	예를들어
+//	
+//	F(2) = F(0) + F(1) = 0 + 1 = 1
+//	F(3) = F(1) + F(2) = 1 + 1 = 2
+//	F(4) = F(2) + F(3) = 1 + 2 = 3
+//	F(5) = F(3) + F(4) = 2 + 3 = 5	8	13	21
+//	와 같이 이어집니다.
+//	
+//	2 이상의 n이 입력되었을 때, n번째 피보나치 수를 1234567으로 나눈 나머지를 리턴하는 함수, solution을 완성해 주세요.
+//	
+//	제한 사항
+//	* n은 1이상, 100000이하인 자연수입니다.
+//	
+//	입출력 예
+//	n	return
+//	3	2
+//	5	5
+//	입출력 예 설명
+//	피보나치수는 0번째부터 0, 1, 1, 2, 3, 5, ... 와 같이 이어집니다.
 public class Main {
 
 	public Main() {
-		Scanner sc = new Scanner(System.in);
-		while(true) {
-			
-			double x = sc.nextInt();
-			double y = sc.nextInt();
-			
-			System.out.printf("%f.1",x+y);
-			System.out.printf("%f.1",x*y);
-			
-		}
+		Solution a = new Solution();
+		a.solution(2);	
 	}	// end main()
+	
+	class Solution {
+	    public int solution(int n) {
+	        int answer = 0;
+	        	
+	        f(n);
+	        
+	        
+	        return answer;
+	    } // end method
+	    
+	    
+	    public int f(int num) {
+	    	int num2 = 0;
+	    	 if(num>=2) {
+	    		 for (int i = 0; i < num; i++) {
+	    			num2 += f(num-1) + f(num-2);					
+				}
+	    	 } else if(num==0 || num == 1) {
+	    		 return num;
+	    	 }
+	    	 
+	    	return num2;
+	    } // end f
+	} // end solution class
 	
 }	// end class
