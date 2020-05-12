@@ -51,6 +51,7 @@
 
 age = 6;
 age++;
+let a = 111;
 console.log('1.age =',age)
 {
     console.log('2.age =',age)
@@ -58,9 +59,10 @@ console.log('1.age =',age)
     // 블럭 바깥쪽 scope 의 변수 사용 가능.
     age = 30;
     console.log(`3.age = ${age}`); 
-
+    
     // var age; // var는 hoisting 발생
     // let age ; // let 은 hoisting 이 발생 안한다.
-
+    
+    console.log(`a = ${a}`); 
 }
 console.log(`4.age = ${age}`);

@@ -57,6 +57,7 @@ console.log(fruits);
 // typeof 만으로는 Object가 나오기 때문에 알 수 없다.
 
 // 1. isArray() : ES5.1 부터 지원.
+console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
 console.log(Array.isArray(fruits));
 
 // 2. 구 브라우저에서 판단하려면 함수만들어서 운영

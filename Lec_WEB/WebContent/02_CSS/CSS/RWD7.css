@@ -36,15 +36,7 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.row:after {
-    content: "";
-    display: block;
-    clear:both;
-}
-
-[class*="col-"]{
-    width: 100%;
-}
+z
 
 /* 600px 이상인 경우 */
 @media (min-width: 600px){
