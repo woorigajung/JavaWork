@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>게시판</title>
+    <link rel="stylesheet" href="CSS/default.css" type="text/css">
+    <link rel="stylesheet" href="CSS/board.css" type="text/css">
 </head>
+
 <body>
-    
+    <header id="logo" class="col-12">
+        <div><a class="logo" href="index.html">
+                <img class="logo" src="img/icons8-coronavirus-100.png">코로나 근절</a></div>
+        <nav id="menu" class="col-12">
+            <div>
+                <ul class="menu">
+                    <li><a href="index.html">코근</a></li>
+                    <li><a href="cook.html">간단요리</a></li>
+                    <li><a href="prevention.html">예방</a></li>
+                    <li><a href="board.html">게시판</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="message">
+        <form action="https://www.w3schools.com/action_page.php">
+            <article class="container">
+                <div class="col-3 col-m-3">
+                    <label for="fname"> Name</label>
+                </div>
+                <div class="col-9 col-m-9">
+                    <input type="text" id="fname" name="fname" placeholder="Your firstname..">
+                </div>
+
+                <div class="col-3 col-m-3">
+                    <label for="lname"> LastName</label>
+                </div>
+                <div class="col-9 col-m-9">
+                    <input type="text" id="lname" name="lname" placeholder="Your lastname..">
+                </div>
+                
+                <div class="col-3 col-m-3">
+                    <label for="title"> Title</label>
+                </div>
+                <div class="col-9 col-m-9">
+                    <input type="text" id="title" name="title" placeholder="title">
+                </div>
+
+                <div class="col-3 col-m-3">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-9 col-m-9">
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height: 400px"></textarea>
+                </div>
+
+                <input type="submit" value="Submit">
+            </article>
+        </form>
+    </section>
 </body>
+
 </html>

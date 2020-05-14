@@ -1,0 +1,89 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/*------ 폰트 ------*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+
+/*------ 기본 설정 ------*/
+body {
+    margin: 0;
+    height: 956px;
+}
+
+* {
+    box-sizing: border-box;
+    /* RWD 필수 */
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/*------ a태그 ------*/
+a {
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: black;
+}
+
+/* ---- header ---- */
+header {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+ 
+}
+
+header img.logo {
+    width: 120px;
+    height: 120px;
+}
+
+header .logo {
+    font-size: 50px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: rgb(230, 241, 204);
+    vertical-align: middle;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+
+header ul.menu {
+    list-style: none;
+    font-weight: bold;
+}
+
+header ul.menu>li {
+    display: inline;
+}
+
+ul.menu a {
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+ul.menu a:hover {
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+/*--------------- 본문 ----------------*/
+section{
+    padding : 0px 10%;
+    padding-top: 3%;
+    
+}
+div{
+    text-align: center;
+    height: 30%;
+
+}
+
+img{
+    width: 80%;
+    height: 500px;
+}

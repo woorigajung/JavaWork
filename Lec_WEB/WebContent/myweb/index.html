@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <link rel="stylesheet" href="default.css" type="text/css">
+    <title>코로나근절</title>
+
+
+    <link rel="stylesheet" href="CSS/index.css" type="text/css">
+    <link rel="stylesheet" href="CSS/default.css" type="text/css">
+
+    <link rel="stylesheet" href="fullPage/fullpage.min.css">
+    <script src="fullPage/fullpage.min.js"></script>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+</script>
 
 <body>
-    <header id="logo" class="col-12">
+    <header id="logo" class="col-12 col-m-12">
         <div><a class="logo" href="index.html">
                 <img class="logo" src="img/icons8-coronavirus-100.png">코로나 근절</a></div>
         <nav id="menu" class="col-12">
@@ -19,7 +28,7 @@
                     <li><a href="index.html">코근</a></li>
                     <li><a href="cook.html">간단요리</a></li>
                     <li><a href="prevention.html">예방</a></li>
-                    <li><a href="board.html">게시판</a></li>
+                    <li><a href="board.html">제보 게시판</a></li>
                 </ul>
             </div>
         </nav>
@@ -28,37 +37,69 @@
     <aside id="sideMenu">
         <ul class="sideMenu">
             <a href="#corona">
-                <li>H</li>
+                <li class="sideMenu">H</li>
             </a>
             <a href="#cook">
-                <li>C</li>
+                <li class="sideMenu">C</li>
             </a>
             <a href="#prevention">
-                <li>P</li>
+                <li class="sideMenu">P</li>
             </a>
             <a href="#board">
-                <li>B</li>
+                <li class="sideMenu">B</li>
             </a>
 
         </ul>
 
     </aside>
 
-    <section id="section">
+    <section id="section" style="position: relative;">
         <article id="corona">
-            <iframe class="corona" width="600" height="450"
+            <iframe class="corona col-10" width="600" height="450"
                 src="https://www.youtube.com/embed/lYSlPFJzwgE?autoplay=1&amp;loop=1;playlist=fn5OBAfHLKQ;mute=1"></iframe>
-            <div class="corona">코로나는 코리아IT를 이길 수 <br> 없습니다.</div>
+            <div class="corona col-10">코로나는 코리아IT를<br>이길 수 없습니다.</div>
+
         </article>
+
         <article id="cook">
+            <div class="cook1 col-10">간단요리</div>
+            <div class="cook1 cook2 col-10">Cook</div>
 
-
+            <div class="cook1 cook3 col-10">코로나19 최전방에서 고생하시는 의료진 분들을 위해<br>
+                집에서 간단하게 만들어 먹을 수 있는 요리<br><br><br><br>원하는 요리가 있으면<br>게시판에 남겨주세요. 큰힘이됩니다(찡긋)!</div>
+            <div class="cook1 Viewmore">
+                <a href="cook.html">View<br>more</a>
+            </div>
         </article>
-        <article id="prevention"></article>
-        <article id="board"></article>
+
+        <article id="prevention">
+            
+                <div class="prevention1 col-10">예방수칙</div>
+                <div class="prevention1 prevention2 col-10">Prevention</div>
+
+                <div class="prevention1 prevention3 col-10">치료제와 백신이 없는 지금<br>
+                    평소에 할 수 있는 간단한 예방수칙!<br><br><br><br>나의 건강은<br>작은 행동 한걸음 부터입니다.</div>
+                <div class="prevention1 Viewmore">
+                    <a href="prevention.html">View<br>more</a>
+        </article>
+
+        <article id="board">
+            <div class="board1 col-10">제보 게시판</div>
+            <div class="board1 board2 col-10">Board</div>
+
+            <div class="board1 board3 col-10">간단한 음식과 예방수칙들을<br>
+                게시판에 남겨주세요!<br><br><br><br>정보하나하나가<br>코로나19 극복에 큰 힘이됩니다.</div>
+            <div class="prevention1 Viewmore">
+                <a href="board.html">View<br>more</a>
+        </article>
+
     </section>
 
+    <script>
+        new fullpage('#section', {});
+    </script>
 
 </body>
+
 
 </html>

@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>간단요리</title>
+
+    <link rel="stylesheet" href="CSS/default.css" type="text/css">
+    <link rel="stylesheet" href="CSS/cook.css" type="text/css">
 </head>
+<script src="cook_data.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 <body>
-    
+    <header id="logo" class="col-12" style="position: relative;">
+        <div><a class="logo" href="index.html">
+                <img class="logo" src="img/icons8-coronavirus-100.png">코로나 근절</a></div>
+        <nav id="menu" class="col-12">
+            <div>
+                <ul class="menu">
+                    <li><a href="index.html">코근</a></li>
+                    <li><a href="cook.html">간단요리</a></li>
+                    <li><a href="prevention.html">예방</a></li>
+                    <li><a href="board.html">게시판</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section style="float: left;">
+        <article id="select" style="position: relative; ">
+            <ul id="page">
+                <li class="Cmenu" style="background-image: url(img/icons8-pancake-50.png);">디저트</li>
+                <li class="Cmenu" style="background-image: url(img/icons8-sandwich-with-fried-egg-80.png);">튀김</li>
+                <li class="Cmenu" style="background-image: url(img/icons8-rice-bowl-64.png);">한식</li>
+                <li class="Cmenu" style="background-image: url(img/icons8-spaghetti-80.png);">양식</li>
+                <li class="Cmenu" style="background-image: url(img/icons8-soup-plate-50.png);">중식</li>
+            </ul>
+        </article>
+
+        <article id="restaurants">
+        </article>
+    </section>
+
 </body>
+
+<script>
+    // 초기값
+    var ftext = "";
+    for (i = 0; i < x.items[0].item.length; i++) {
+        ftext += "<div>";
+        ftext += "<div><img src='" + x.items[0].item[i].img + "'/></div>";
+        ftext += "<div>" + x.items[0].item[i].fname + "</div>";
+        ftext += "<div>" + x.items[0].item[i].supplies + "</div>";
+        ftext += "<div>" + x.items[0].item[i].method + "</div>";
+
+        ftext += "</div>";
+    }
+    $("#restaurants").html(ftext);
+
+
+    $("#page>li").click(function () {
+        var food = $(this).text();
+        console.log(food);
+
+        if (food == "디저트") var row = 0;
+        if (food == "튀김") var row = 1;
+        if (food == "한식") var row = 2;
+        if (food == "양식") var row = 3;
+        if (food == "중식") var row = 4;
+        console.log(x.items[row].item.length);
+
+        var text = "";
+
+
+        for (i = 0; i < x.items[row].item.length; i++) {
+            console.log(food);
+            text += "<div>";
+            text += "<div><img src='" + x.items[row].item[i].img + "'/></div>";
+            text += "<div>" + x.items[row].item[i].fname + "</div>";
+            text += "<div>" + x.items[row].item[i].supplies + "</div>";
+            text += "<div>" + x.items[row].item[i].method + "</div>";
+
+            text += "</div>";
+        }
+
+        $("#restaurants").html(text);
+
+
+
+    })
+</script>
+
 </html>

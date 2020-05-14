@@ -1,0 +1,122 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/*------ 기본 설정 ------*/
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    /* RWD 필수 */
+    margin: 0px;
+    scroll-behavior: smooth;
+    
+}
+
+/*------ a태그 ------*/
+a {
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: black;
+}
+
+/* ---- header ---- */
+header {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+ 
+}
+
+header img.logo {
+    width: 120px;
+    height: 120px;
+}
+
+header .logo {
+    font-size: 50px;
+    vertical-align: middle;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+header ul.menu {
+    list-style: none;
+    font-weight: bold;
+}
+
+header ul.menu>li {
+    display: inline;
+}
+
+ul.menu a {
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+ul.menu a:hover {
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+
+
+/*----------- 게시판 ---------------*/
+.container{
+    position: relative;
+    height: 956px;
+    padding-top: 10%;
+}
+#message{
+    background-image: url(https://i.pinimg.com/564x/7e/8e/55/7e8e5585489015fe0fb91f36f89077f0.jpg);
+    background-repeat: no-repeat;
+    height: 956px;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+
+label {
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+}
+
+
+input[type=text],textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%;
+}
+
+input[type=submit] {
+    border-radius: 5px;
+    width: 60%;
+    padding : 20px 0;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+[class*="col-"]{
+    width: 100%;
+}
+
+
+
+
+
+
+.logo{
+    display: none;
+}
+#menu{
+    padding: 5% 5%;
+}
+ul.menu a {
+    padding: 10px;
+}

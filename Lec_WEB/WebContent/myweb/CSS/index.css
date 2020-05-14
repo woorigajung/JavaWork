@@ -1,0 +1,291 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/*------ 폰트 ------*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+/*------ 기본 설정 ------*/
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    /* RWD 필수 */
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/*------ a태그 ------*/
+a {
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: black;
+}
+
+/* ---- header ---- */
+header {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+ 
+}
+
+header img.logo {
+    width: 120px;
+    height: 120px;
+}
+
+header .logo {
+    font-size: 50px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: rgb(230, 241, 204);
+    vertical-align: middle;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+
+header ul.menu {
+    list-style: none;
+    font-weight: bold;
+}
+
+header ul.menu>li {
+    display: inline;
+}
+
+ul.menu a {
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+ul.menu a:hover {
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+/* ---- aside ----- */
+#sideMenu{
+    position: fixed;
+    top: 25%;
+    right: 8%;
+    font-size: 20px;
+    color: #F3821F;
+    background-color: rgba(95, 158, 160);
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+    z-index: 3;
+}
+
+
+.sideMenu li{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style: none;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*------- article --------*/
+article{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---- section ---- */
+
+/* ---- corona ----*/
+#corona {
+    background-image: url(https://t1.daumcdn.net/cfile/tistory/998C68465E86C3391E);
+    background-repeat: no-repeat;
+    height: 956px;
+    background-size: 100% 100%;
+}
+
+#corona>iframe {
+    display: block;
+    position: relative;
+    width: 60%;
+    left: 20%;
+    top: 17%;
+    border: none;
+    border-radius: 5px;
+}
+
+#corona>div {
+    display: block;
+    position: relative;
+    width: 60%;
+    top: 19%;
+    left: 20%;
+    border-radius: 5px;
+    background-color: rgba(95, 158, 160, 0.4);
+    text-align: center;
+    font-weight: bold;
+    padding: 5%;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+/* ------- cook -------*/
+#cook {
+    background-image: url(https://blog.hmgjournal.com/images_n/contents/180515_egg01.jpg) ;
+    background-repeat: no-repeat;
+    height: 956px;
+    background-size: 100% 100%;
+}
+
+div.cook1{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 24%;
+    left: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Nanum Brush Script', cursive;;
+}
+
+div.cook2{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 24%;
+    left: 10%;
+    font-size: 20px;
+    color: rgba(5, 238, 83, 0.753);
+}
+
+div.cook3{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 25%;
+    left: 10%;
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 5%;
+}
+
+
+
+
+/* ------- prevention -------*/
+#prevention {
+    background-image: url(https://cdn.crowdpic.net/list-thumb/thumb_l_E9410309924DF2164F6594F427EBE6F9.jpg);
+    background-repeat: no-repeat;
+    height: 956px;
+    background-size: 100% 100%;
+}
+
+div.prevention1{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 24%;
+    left: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Nanum Brush Script', cursive;;
+}
+
+div.prevention2{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 24%;
+    left: 10%;
+    font-size: 20px;
+    color: rgba(5, 238, 83, 0.753);
+}
+
+div.prevention3{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 25%;
+    left: 10%;
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 5%;
+}
+
+
+/* ------- board -------*/
+#board {
+    background-image: url(https://us.123rf.com/450wm/kolotuschenko/kolotuschenko1711/kolotuschenko171100001/90035508-%EB%B2%A1%ED%84%B0-%ED%9D%B0%EC%83%89-%ED%98%84%EC%8B%A4%EC%A0%81%EC%9D%B8-%EB%8B%AB%ED%9E%8C-%EB%90%9C-%EB%82%98%EC%84%A0%ED%98%95-%EB%B0%94%EC%9A%B4%EB%93%9C-%EB%85%B8%ED%8A%B8%EB%B6%81-%EA%B8%88%EC%86%8D-%EC%8B%A4%EB%B2%84-%EB%82%98%EC%84%A0%ED%98%95-%EA%B0%80%EB%A1%9C-%EB%B9%88-%EC%B9%B4%ED%94%BC-%EB%B6%81-%EC%A3%BC%EC%B5%9C%EC%9E%90-%EB%98%90%EB%8A%94-%EC%A0%88%EC%97%B0-%EC%9D%BC%EA%B8%B0%EC%9D%98-%ED%85%9C%ED%94%8C%EB%A6%BF-mock-%EB%A9%94%EB%AA%A8%EC%9E%A5-a5.jpg?ver=6);
+    background-repeat: no-repeat;
+    height: 956px;
+    background-size: 100% 100%;
+}
+
+div.board1{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 29%;
+    left: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Nanum Brush Script', cursive;;
+}
+
+div.board2{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 29%;
+    left: 10%;
+    font-size: 20px;
+    color: rgba(5, 238, 83, 0.753);
+}
+
+div.board3{
+    display: block;
+    position: relative;
+    width: 80%;
+    top: 30%;
+    left: 10%;
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 5%;
+}
+
+
+/*---- View -----*/
+div.Viewmore>a{
+    display: inline-block;
+    width: 70px;
+    height: auto;
+    text-shadow: none;
+    font-size: 20px;
+    background-color: rgba(95, 158, 160, 0.4);
+    color:white;
+    left: 0%;
+    top: 35%;
+    text-align: center;
+}
+
+
+
+
+

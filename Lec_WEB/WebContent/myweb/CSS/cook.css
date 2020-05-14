@@ -1,0 +1,158 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/*------ 폰트 ------*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+
+/*------ 기본 설정 ------*/
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    /* RWD 필수 */
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/*------ a태그 ------*/
+a {
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: black;
+}
+
+/* ---- header ---- */
+header {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+ 
+}
+
+header img.logo {
+    width: 120px;
+    height: 120px;
+}
+
+header .logo {
+    font-size: 50px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: rgb(230, 241, 204);
+    vertical-align: middle;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    
+}
+
+header ul.menu {
+    list-style: none;
+    font-weight: bold;
+}
+
+header ul.menu>li {
+    display: inline;
+}
+
+ul.menu a {
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+ul.menu a:hover {
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+/*----- select -------*/
+section{
+    width: 100%;
+    text-align: center;
+}
+
+
+#page>li{
+    display: inline-block;
+    list-style: none;
+    padding: 3% 5%;
+}
+
+li{
+    background-repeat: no-repeat;
+    height: 150px;
+    background-size: 100% 100px;
+    background-position: bottom;
+    background-size: 80px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+li.Cmenu:hover{
+    background-color: rgba(95, 158, 160, 0.5);
+}
+
+.logo{
+    display: none;
+}
+
+#menu{
+    padding: 5% 0% 1% 0%;
+}
+ul.menu a {
+    padding: 10px;
+}
+
+ul#page{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/*------간단음식 메뉴--------*/
+section{
+    background-color: rgba(158, 192, 78, 0.5);
+    
+}
+
+
+article#select{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+article#restaurants{
+    background-color: rgb(228, 199, 228, 0.4);
+    
+}
+section>#restaurants{
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    width: 80%;
+    height: max-content;
+    text-align: center;
+}
+#restaurants > div {
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    margin: 2% 1.7%;
+    background-color: #F5F5F5;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    font-weight: bold;
+    
+}
+
+
+element.style {
+    opacity: 1;
+    top: 370px;
+    width: 80%;
+}
