@@ -74,13 +74,15 @@ ul.menu a:hover {
 section{
     width: 100%;
     text-align: center;
+    overflow: scroll;
 }
 
 
 #page>li{
     display: inline-block;
     list-style: none;
-    padding: 3% 5%;
+    padding: 3% 8%;
+    cursor: pointer;
 }
 
 li{
@@ -111,6 +113,8 @@ ul.menu a {
 ul#page{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    white-space: nowrap;
+    overflow-x: scroll;
 }
 
 

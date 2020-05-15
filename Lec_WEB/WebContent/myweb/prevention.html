@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예방</title>
     <link rel="stylesheet" href="CSS/prevention.css" type="text/css">
     <link rel="stylesheet" href="CSS/default.css" type="text/css">
+    <style>
+        /* 브라우저 윈도우가 600 이하이면 적용 */
+        @media only screen and (max-width: 768px) {
+            /* Mobile */
+
+            nav#menu {
+                padding: 30px 0;
+            }
+
+        }
+    </style>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <body>
     <header id="logo" class="col-12">
         <div><a class="logo" href="index.html">
                 <img class="logo" src="img/icons8-coronavirus-100.png">코로나 근절</a></div>
         <nav id="menu" class="col-12">
             <div>
+                <div>&nbsp;</div>
                 <ul class="menu">
                     <li><a href="index.html">코근</a></li>
                     <li><a href="cook.html">간단요리</a></li>
@@ -20,13 +35,51 @@
                     <li><a href="board.html">게시판</a></li>
                 </ul>
             </div>
+            <div>&nbsp;</div>
+            <hr>
         </nav>
     </header>
     <section class="col-12 col-m-12">
         <div id="prevention">
-            <img class="prevention" src="https://newsimg.hankookilbo.com/2020/02/11/202002111409761323_5.jpg" alt="">
+            <p class="prevention1">1</p><br>
+            <p class="prevention2">2</p><br>
+            <p class="prevention3">3</p>
         </div>
 
     </section>
+    <script>
+        var $p1 = $('.prevention1')
+        var $p2 = $('.prevention2')
+        var $p3 = $('.prevention3')
+
+        $p1.one('click',function () {
+            $.when($(this).text('').animate({
+                width: '300px',
+                borderRadius: '10%',
+            }, 1000)).then(function(){
+                return $(this).text('1. 손씻기').css('font-size','20px')
+            })
+        });
+
+        $p2.one('click',function () {
+            $.when($(this).text('').animate({
+                width: '300px',
+                borderRadius: '10%',
+            }, 1000)).then(function(){
+                return $(this).text('2. 마스크쓰기').css('font-size','20px')
+            })
+        });
+
+        
+        $p3.one('click',function () {
+            $.when($(this).text('').animate({
+                width: '300px',
+                borderRadius: '10%',
+            }, 1000)).then(function(){
+                return $(this).text('3. 사람많은 곳 방문 자제').css('font-size','20px')
+            })
+        });
+    </script>
 </body>
+
 </html>
