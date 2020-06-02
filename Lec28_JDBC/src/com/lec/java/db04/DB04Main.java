@@ -23,9 +23,7 @@ public class DB04Main implements Query {
 		ResultSet rs = null;
 		
 		// 자동생성되는 컬럼의 이름(들) 이 담긴 배열 준비 (auto-generated keys 배열)
-		String [] generatedCols = {COL_LABEL_NO
-				,COL_LABEL_NO
-		};  // mb_no
+		String [] generatedCols = {COL_LABEL_NO};  // mb_no
 		
 		try {
 			// OracleDriver 클래스를 메모리에 로딩
@@ -40,7 +38,7 @@ public class DB04Main implements Query {
 			System.out.println("INSERT");
 			// Statement 나 PreparedStatement 생성시 두번째 매개변수로 auto-generated keys 배열 넘겨줌
 			
-			pstmt = conn.prepareStatement(SQL_INSERT_SEQ,generatedCols2);
+			pstmt = conn.prepareStatement(SQL_INSERT_SEQ, generatedCols);
 			pstmt.setString(1, "그루트");
 			int cnt = pstmt.executeUpdate();
 			System.out.println(cnt + "개 행 INSERT 성공");
@@ -49,7 +47,7 @@ public class DB04Main implements Query {
 			// auto-generated keys 값 뽑아오기
 			rs = pstmt.getGeneratedKeys();
 			if(rs.next()) {
-				long genKey = rs.getLong(2);  
+				long genKey = rs.getLong(1);  
 				System.out.println("자동 생성된 key 값 = " + genKey);
 			}						
 			

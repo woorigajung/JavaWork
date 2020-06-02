@@ -3,6 +3,8 @@
 <%@ page import = "java.util.*" %>
 <% GregorianCalendar today = new GregorianCalendar(); %>
 <%= String.format("%ty년 %ty월 %td일", today, today, today) %>
+<p>하이욤</p>
+<div>바이욤</div>
 
 
 
