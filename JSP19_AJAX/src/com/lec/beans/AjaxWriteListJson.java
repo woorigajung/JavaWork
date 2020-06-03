@@ -11,7 +11,7 @@ public class AjaxWriteListJson {
 	int count;  // 데이터 개수
 	String status;  // 처리 결과
 	
-	@JsonIgnore
+//	@JsonIgnore
 	String memo;   // response 에서 제외할 필드
 	
 	@JsonProperty("data")  // Json property 이름과 Java 필드명이 다른 경우

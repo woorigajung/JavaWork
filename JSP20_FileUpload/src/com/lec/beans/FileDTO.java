@@ -9,12 +9,12 @@ public class FileDTO {
 	public FileDTO() {
 		super();
 	}
-	public FileDTO(int uid, String source, String file, boolean isImage) {
+	public FileDTO(int uid, String source, String file) {
 		super();
 		this.uid = uid;
 		this.source = source;
 		this.file = file;
-		this.isImage = isImage;
+//		this.isImage = isImage;
 	}
 	public int getUid() {
 		return uid;
