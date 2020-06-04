@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.io.Console;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -9,13 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.jni.LibraryNotFoundError;
+import com.command.write.*;
 
-import com.command.write.Command;
-import com.command.write.ListCommand;
-import com.command.write.WriteCommand;
-
-@WebServlet("*.team5")
+@WebServlet("*.do")
 public class WriteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -25,12 +22,10 @@ public class WriteController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		actionDo(request, response);
-		System.out.println("doGet 들어옴");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		actionDo(request, response);
-		System.out.println("doPost 들어옴");
 	}
 	
 	protected void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -68,15 +63,33 @@ public class WriteController extends HttpServlet {
 			command = new WriteCommand();
 			command.execute(request, response);
 			viewPage = "writeOk.jsp";
-			break;			
+			break;		
+			
 		case "/view.do":
+			System.out.println("view.do들어옴");
+			command = new ViewCommand();
+			command.execute(request, response);
 			viewPage = "view.jsp";
+
+			break;			
+		case "/update.do":
+			command = new SelectCommand();  // '수정' 이지만, 일단 읽어오는것부터 시작이다.
+			command.execute(request, response);
+			viewPage = "update.jsp";
 			break;
-		case "/delete.do":
+
+		case "/updateOk.do":
+			command = new UpdateCommand();
+			command.execute(request, response);
+			viewPage = "updateOk.jsp";
+			break;  // 디버깅 훈련, 이 break를 없애고, 찾아보기
+
+		case "/deleteOk.do":
+			command = new DeleteCommand();
+			command.execute(request, response);
 			viewPage = "deleteOk.jsp";
-			break;
+			break;	
 		} // end switch
-		
 		
 		// request 를 위에서 결정된 view 에 forward 해줌.
 		if(viewPage != null) {

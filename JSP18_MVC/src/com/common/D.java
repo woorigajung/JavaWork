@@ -1,4 +1,4 @@
-package common;
+package com.common;
 
 /*
  * DB 접속 정보, 쿼리문, 테이블명, 컬럼명 등은

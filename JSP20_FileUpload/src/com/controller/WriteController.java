@@ -9,14 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.command.write.Command;
-import com.command.write.DeleteCommand;
-import com.command.write.DownloadCommand;
-import com.command.write.ListCommand;
-import com.command.write.SelectCommand;
-import com.command.write.UpdateCommand;
-import com.command.write.ViewCommand;
-import com.command.write.WriteCommand;
+import com.command.write.*;
 
 @WebServlet("*.do")
 public class WriteController extends HttpServlet {
@@ -93,13 +86,13 @@ public class WriteController extends HttpServlet {
 			command = new DeleteCommand();
 			command.execute(request, response);
 			viewPage = "deleteOk.jsp";
-			break;	
+			break;
 			
-		// 파일 다운로드!	
+		// 파일 다운로드!
 		case "/download.do":
 			command = new DownloadCommand();
 			command.execute(request, response);
-			// 굳이 view 필요하지 않음
+			// 굳이 view 필요하지 않다.
 			break;
 		} // end switch
 		

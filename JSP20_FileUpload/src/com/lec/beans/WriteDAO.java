@@ -103,17 +103,11 @@ public class WriteDAO {
 				uid = rs.getInt(1);  // 첫번째 컬럼
 			}
 			
-			pstmt.close();
 			// 첨부파일(들) 정보 테이블에 INSERT 하기
-			pstmt = conn.prepareStatement(D.SQL_FILE_INSERT);
-			for(int i = 0; i < originalFileNames.size(); i++) {
-				pstmt.setString(1, originalFileNames.get(i));
-				pstmt.setString(2, fileSystemNames.get(i));
-				pstmt.setInt(3, uid);
-				pstmt.executeUpdate();
-			} // end for
-			
-			
+			FileDAO fileDao = new FileDAO();
+			int fileCnt = fileDao.insert(uid, originalFileNames, fileSystemNames);
+			// originalFileNames.size() == fileCnt 같아야 한다.
+						
 		} finally {
 			close();			
 		}

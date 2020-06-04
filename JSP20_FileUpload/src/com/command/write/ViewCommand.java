@@ -62,7 +62,6 @@ public class ViewCommand implements Command {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 
 	} // end execute()
 

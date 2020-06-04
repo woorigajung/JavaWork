@@ -19,12 +19,11 @@ public class WriteCommand implements Command {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		
 		int cnt = 0;
 		WriteDAO dao = new WriteDAO();
 		
 		//---------------------------------------------
-		// 업로드 파일
+		// 1. MultipartRequest 생성 -> 파일 업로드 됨  
 		ServletContext context = request.getServletContext();
 		String saveDirectory = context.getRealPath("upload");
 		
@@ -44,12 +43,13 @@ public class WriteCommand implements Command {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		
+
+		//---------------------------------------------
+		// 2. 업로드된 파일의   '원본이름(들)' 과 '저장된 이름(들)' 받아오기
 		List<String> originalFileNames = new ArrayList<String>();
 		List<String> fileSystemNames = new ArrayList<String>();
 		
 		Enumeration names = multi.getFileNames();  // type="file" 요소의 name들 추출
-		
 		while(names.hasMoreElements()) {
 			String name = (String)names.nextElement();
 			String originalFileName = multi.getOriginalFileName(name);
@@ -63,8 +63,8 @@ public class WriteCommand implements Command {
 			
 		} // end while
 		
-		
-		// 매개변수 받아오기
+		//---------------------------------------------
+		// 3. 게시글 및 첨부파일 -> DB 에 저장 
 		String name = multi.getParameter("name");  // ★MultipartRequest 객체 사용!
 		String subject = multi.getParameter("subject");
 		String content = multi.getParameter("content");
@@ -82,10 +82,23 @@ public class WriteCommand implements Command {
 		} // end if
 			
 		request.setAttribute("result", cnt);
-
 	} // end execute()
 
 } // end Command
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

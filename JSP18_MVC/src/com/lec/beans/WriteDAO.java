@@ -11,7 +11,7 @@ import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-import common.D;
+import com.common.D;
 
 // DAO : Data Access Object
 //   DB 에 접속하여 트랜잭션을 수행하는 객체
@@ -68,7 +68,7 @@ public class WriteDAO {
 			
 			cnt = pstmt.executeUpdate();
 		} finally {
-			close();	 		
+			close();			
 		}
 
 		return cnt;

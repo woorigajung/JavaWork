@@ -46,6 +46,7 @@ ${list[0].content }
 
 <%-- 첨부파일 및 다운로드 링크 --%>
 <c:if test="${fn:length(file) > 0 }">
+<div style="background-color: beige; padding: 2px 10px; margin-bottom: 5px; border: 1px solid black;">
 	<h4>첨부파일</h4>
 	<ul>
 		<c:forEach var="element" items="${file }">
@@ -63,6 +64,7 @@ ${list[0].content }
 			</c:if>
 		</c:forEach>
 	</ul>
+</div>
 </c:if>
 
 
