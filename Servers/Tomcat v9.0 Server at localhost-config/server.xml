@@ -110,9 +110,9 @@
 
 
 				
-			<Context docBase="JSP18_MVC" path="/JSP18_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_MVC"/><Context docBase="JSP22_JSTL" path="/JSP22_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP22_JSTL"/>
 			
-			<Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/><Context docBase="JSPEX_WebEditor" path="/JSPEX_WebEditor" reloadable="true" source="org.eclipse.jst.jee.server:JSPEX_WebEditor"/><Context docBase="JSP08_TagDirective" path="/JSP08_TagDirective" reloadable="true" source="org.eclipse.jst.jee.server:JSP08_TagDirective"/><Context docBase="JSP01_Hello" path="/JSP01_Hello" reloadable="true" source="org.eclipse.jst.jee.server:JSP01_Hello"/><Context docBase="JSP19_AJAX" path="/JSP19_AJAX" reloadable="true" source="org.eclipse.jst.jee.server:JSP19_AJAX"/><Context docBase="JSP12_Session" path="/JSP12_Session" reloadable="true" source="org.eclipse.jst.jee.server:JSP12_Session"/></Host>
+			
+			<Context docBase="JSPEX_Category" path="/JSPEX_Category" reloadable="true" source="org.eclipse.jst.jee.server:JSPEX_Category"/><Context docBase="JSP19_AJAX" path="/JSP19_AJAX" reloadable="true" source="org.eclipse.jst.jee.server:JSP19_AJAX"/><Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/><Context docBase="STS09_MVC" path="/sts09_mvc" reloadable="true" source="org.eclipse.jst.jee.server:STS09_MVC"/><Context docBase="STS10_Request" path="/sts10_request" reloadable="true" source="org.eclipse.jst.jee.server:STS10_Request"/></Host>
 		</Engine>
 	</Service>
 </Server>
